@@ -6,7 +6,7 @@
     z-index: 1;
     border-radius: 20px;
     transition: 0.3s ease;
-    &:hover .logo{
+    &:hover{
         transform: scale(1.1);
         cursor: pointer;
     }
@@ -37,7 +37,8 @@
             transition: 0.3s ease;
             img{
                 height: 100%;
-                min-width: none;
+                width: 100%;
+                transition: 0.3s ease;
             }
            
         }
