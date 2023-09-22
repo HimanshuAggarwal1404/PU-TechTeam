@@ -75,3 +75,38 @@
         }}
     }
 }
+.userInfo{
+    height: 100%;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    img{
+        max-height: 70%;
+        width: 100%;
+        border-radius: 50%;
+
+    }
+}
+.username{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-right: 5px;
+}
+.welcome{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: small;
+}
+.name{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: large;
+}

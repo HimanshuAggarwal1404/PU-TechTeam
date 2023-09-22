@@ -1,4 +1,4 @@
-.Homewrapper{
+.Homewrapper {
     height: 70vh;
     width: 100vw;
     z-index: 1;
@@ -6,22 +6,36 @@
     align-items: center;
     justify-content: space-around;
 }
-.link{
+*{
+    padding: 0;
+    margin: 0;
+}
+.link {
     color: white;
     text-decoration: none;
 }
-.signin{
+.allwrap{
+    height: 100vh;
+    width: 100vw;
+}
+.signin {
     height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.signout{
+.signinoff{
+    height: 0vh;
+    width: 0vw;
+}
+
+.signout {
     width: 100vw;
     display: flex;
     justify-content: center;
-    button{
+
+    button {
         width: 10vw;
         height: 7vh;
         background-color: transparent;
@@ -29,8 +43,9 @@
         color: white;
         border-radius: 5px;
         transition: 0.2s ease;
-        &:hover{
-border: 3px solid rgba(255, 255, 255, 0.43);
+
+        &:hover {
+            border: 3px solid rgba(255, 255, 255, 0.43);
             color: rgba(255, 255, 255, 0.43);
             cursor: pointer;
         }

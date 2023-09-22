@@ -1,20 +1,23 @@
 import "../HomePage/Home.scss"
+import Header from "../../Components/Header/Header"
 import { Link } from "react-router-dom"
 import jwtDecode from "jwt-decode"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Homepagebox from "../../Components/HomePageBox/HomePageBox"
+import { React, useContext } from "react"
+import UserContext from "../../../Context/UserContext"
 const Home = () => {
-    const [user, setUser] = useState({});
+    const context= useContext(UserContext);
+
     function handleCallbackResponse(response) {
-
-
         var userObject = jwtDecode(response.credential);
         console.log(userObject);
-        setUser(userObject);
+        context.setUser(userObject);
         document.getElementById("signInDiv").hidden = true;
+
     }
-    function handleSignOut(event) {
-        setUser({});
+    function handleSignOut() {
+        context.setUser({});
         document.getElementById("signInDiv").hidden = false;
 
     }
@@ -27,15 +30,18 @@ const Home = () => {
         google.accounts.id.renderButton(
             document.getElementById("signInDiv"), { theme: "outline", size: "large" }
         );
-        {Object.keys(user).length == 0 && google.accounts.id.prompt()}
+        {Object.keys(context.user).length == 0 && google.accounts.id.prompt()}
     })
 
     return (
-        <div className="signin">
+        <div>
+        <div className="signin" id="signin">
             <div id="signInDiv"></div>
 
-            {Object.keys(user).length != 0 &&
+            {Object.keys(context.user).length != 0 &&
+            
             <div className="allwrap">
+                <Header />
                 <div className="Homewrapper">
                     <Link className="link" to="/ExplorePath"><Homepagebox title="Explore Paths" logo="https://career-development-bits-pilani.notion.site/icons/search_blue.svg?mode=dark" /></Link>
                     <Link className="link" to="/Upskill"><Homepagebox title="Up-Skill" logo="https://career-development-bits-pilani.notion.site/icons/hammer_blue.svg?mode=dark" /></Link>
@@ -48,7 +54,7 @@ const Home = () => {
                 </div>
             }
         </div>
-
+</div>
 
     );
 }

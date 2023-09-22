@@ -1,6 +1,11 @@
 import "./Header.scss"
 import { Link } from "react-router-dom";
+import { React, useContext } from "react"
+import UserContext from "../../../Context/UserContext"
 const Header = () => {
+    const context = useContext(UserContext);
+    const username = context.user.given_name;
+
     return (
         <div className="headerWrapper">
             <div className="header">
@@ -12,9 +17,15 @@ const Header = () => {
                     <div>Page1</div>
                     <div>Page2</div>
                     <div>Page3</div>
-                    <div>Page4</div>
-                    <div>Page5</div>
+                    <div className="userInfo">
+                        <div className="username">
+                            <div className="welcome">Welcome</div>
+                            <div className="name">{context.user.given_name}</div>
+                        </div>
+                        <img src={context.user.picture} alt={context.user.given_name} />
+
                     </div>
+                </div>
             </div>
         </div>
     )
