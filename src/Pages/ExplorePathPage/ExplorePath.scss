@@ -1,4 +1,6 @@
-
+*{
+    margin: 0;padding: 0;
+}
 .ExplorePathWrapper {
     width: 100%;
     display: grid;
@@ -8,12 +10,122 @@
     justify-content: space-evenly;
     background-color: #E0E0E0;
 }
-.ExplorePath{
+
+.ExplorePath {
     width: 100vw;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    background-color: #E0E0E0;
+}
 
+.ExplorePathBlackBox {
+    width: 100vw;
+    height: 65vh;
+    background-color: #252525;
+    margin-bottom: 5vh;
+    margin-top: 13vh;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+
+    .ExplorePathBlackBox-desc {
+        height: 80%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+            
+            .ExplorePathBlackBox-desc-heading1 {
+            font-family: Poppins;
+            color: white;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            display: flex;
+            width: 75%;
+            height: 25%;
+
+        }
+        .ExplorePathBlackBox-desc-heading2 {
+            font-family: Poppins;
+            color: white;
+            font-size: 96px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            display: flex;
+            width: 75%;
+            height: 25%;
+
+        }
+        .ExplorePathBlackBox-desc-content {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            display: flex;
+            align-items: center;
+            width: 75%;
+            height: 45%;
+
+
+        }
+    }
+
+    .ExplorePathBlackBox-img {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        object-fit: contain;
+        z-index: 10;
+        img{
+            width: 120%;
+            height: 110%;
+            z-index: 10;
+        }
+    }
+
+}
+.three-color-rectangles{
+    position: absolute;
+    top: -2vh;
+    right: 0vw;
+    z-index: 5;
+    display: flex;
+    .redRectangle{
+        height: 34vh;
+        width: 11vw;
+        background-color: #DB3931;
+        z-index: 5;
+        border-radius: 0px 0px 175px 175px;
+    }
+    .blueRectangle{
+        height: 34vh;
+        width: 11vw;
+        background-color: #85C0E3;
+        z-index: 4;
+        border-radius: 0px 0px 175px 175px;
+        position: relative;
+        left: -6vw;
+    }
+    .yellowRectangle{
+        height: 34vh;
+        width: 11vw;
+        background-color: #F2CC4F;
+        z-index: 3;
+        border-radius: 0px 0px 175px 175px;
+        position: relative;
+        left: -12vw;
+    }
 }
 .signin {
     height: 100vh;
@@ -28,6 +140,7 @@
         grid-template-columns: auto auto auto;
     }
 }
+
 @media all and (max-width: 750px) {
     .ExplorePathWrapper {
         grid-template-columns: auto auto;
