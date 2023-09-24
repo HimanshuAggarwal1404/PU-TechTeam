@@ -1,8 +1,34 @@
-.ExplorePathWrapper{
-    width: 100vw;
+
+.ExplorePathWrapper {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(350px, 1fr) );
-    padding: 1vw;
-    column-gap: 1vw;
+    grid-template-columns: auto auto auto auto;
     row-gap: 5vh;
+    place-items: center;
+    justify-content: space-evenly;
+}
+.ExplorePath{
+    width: 100vw;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+.signin {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media all and (max-width: 1300px) {
+    .ExplorePathWrapper {
+        grid-template-columns: auto auto auto;
+    }
+}
+@media all and (max-width: 750px) {
+    .ExplorePathWrapper {
+        grid-template-columns: auto auto;
+    }
 }

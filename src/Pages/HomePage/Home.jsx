@@ -8,7 +8,6 @@ import { React, useContext } from "react"
 import UserContext from "../../../Context/UserContext"
 const Home = () => {
     const context= useContext(UserContext);
-
     function handleCallbackResponse(response) {
         var userObject = jwtDecode(response.credential);
         // console.log(userObject);
@@ -30,13 +29,16 @@ const Home = () => {
         google.accounts.id.renderButton(
             document.getElementById("signInDiv"), { theme: "outline", size: "large" }
         );
-        {Object.keys(context.user).length == 0 && google.accounts.id.prompt()}
+        {Object.keys(context.user).length == 0 && google.accounts.id.prompt()};
+        
     })
 
     return (
-        <div>
-        <div className="signin" id="signin">
-            <div id="signInDiv"></div>
+        <>
+        
+            {Object.keys(context.user).length == 0 &&
+            <div className="signin" id="signin">
+            <div id="signInDiv"></div></div>}
 
             {Object.keys(context.user).length != 0 &&
             
@@ -53,8 +55,8 @@ const Home = () => {
 
                 </div>
             }
-        </div>
-</div>
+        
+</>
 
     );
 }

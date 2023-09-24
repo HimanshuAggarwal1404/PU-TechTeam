@@ -11,8 +11,7 @@ function App() {
   return (
     <UserState>
       <BrowserRouter>
-        
-        <Routes>
+          <Routes>
           <Route path='/' Component={Home} />
           <Route path='/ExplorePath' Component={ExplorePath} />
           <Route path='/CrackInterviews' Component={CrackInterviews} />
