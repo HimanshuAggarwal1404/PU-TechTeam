@@ -11,7 +11,7 @@ const Home = () => {
 
     function handleCallbackResponse(response) {
         var userObject = jwtDecode(response.credential);
-        console.log(userObject);
+        // console.log(userObject);
         context.setUser(userObject);
         document.getElementById("signInDiv").hidden = true;
 
