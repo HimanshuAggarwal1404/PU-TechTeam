@@ -4,6 +4,7 @@ import jwtDecode from "jwt-decode"
 import { useEffect } from "react"
 import { React, useContext } from "react"
 import UserContext from "../../../Context/UserContext"
+import img from "../../assets/Images/clock-tower.png"
 const ExplorePath = () => {
     const context = useContext(UserContext);
     function handleCallbackResponse(response) {
@@ -42,7 +43,7 @@ const ExplorePath = () => {
                         
                         <div className="ExplorePathBlackBox-desc-content">The career tracks are meant especially from the point of view to help you start your preparation journey in the field of your choice. We have compiled an ordered playlist of resources for you to follow regarding each of these career fields.</div>
                     </div>
-                    <div className="ExplorePathBlackBox-img"><img src="/src/assets/Images/clock-tower.png" alt="clockTower"/></div>
+                    <div className="ExplorePathBlackBox-img"><img src={img} alt="clockTower"/></div>
                 </div>
                 <div className="three-color-rectangles">
                     <div className="redRectangle"></div>
