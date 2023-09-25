@@ -7,8 +7,16 @@ const UserState = (props) => {
     const setUser = (newUser)=>{
         updateUser(newUser);
     }
+    let isLoggedIn=false;
+    if (sessionStorage.getItem('users')){
+        isLoggedIn=false;
+    }
+    else{
+        isLoggedIn=true;
+    }
+
     return(
-        <UserContext.Provider value={{user, setUser}}>
+        <UserContext.Provider value={{user, setUser, isLoggedIn}}>
             {props.children}
         </UserContext.Provider>
     )

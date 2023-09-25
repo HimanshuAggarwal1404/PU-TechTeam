@@ -8,16 +8,30 @@ import { React, useContext } from "react"
 import UserContext from "../../../Context/UserContext"
 const Home = () => {
     const context= useContext(UserContext);
+    // let isLoggedIn = false;
+    // if (sessionStorage.getItem('users')){
+    //     isLoggedIn=false;
+    // }
+    // else{
+    //     isLoggedIn=true;
+    // }
+
     function handleCallbackResponse(response) {
         var userObject = jwtDecode(response.credential);
-        // console.log(userObject);
+        console.log(userObject);
         context.setUser(userObject);
-        document.getElementById("signInDiv").hidden = true;
-
+        sessionStorage.setItem('users', JSON.stringify(userObject));
+        
+        // console.log(sessionStorage.getItem('users'));
+        // console.log(context.isLoggedIn);
+        // document.getElementById("signInDiv").hidden = true;
     }
     function handleSignOut() {
         context.setUser({});
-        document.getElementById("signInDiv").hidden = false;
+        sessionStorage.removeItem('users');
+        // console.log(sessionStorage.getItem('users'));
+        // console.log(context.isLoggedIn);
+        // document.getElementById("signInDiv").hidden = false;
 
     }
 
@@ -29,18 +43,19 @@ const Home = () => {
         google.accounts.id.renderButton(
             document.getElementById("signInDiv"), { theme: "outline", size: "large" }
         );
-        {Object.keys(context.user).length == 0 && google.accounts.id.prompt()};
+        {context.isLoggedIn && google.accounts.id.prompt()};
         
     })
+
 
     return (
         <>
         
-            {Object.keys(context.user).length == 0 &&
+            {context.isLoggedIn &&
             <div className="signin" id="signin">
             <div id="signInDiv"></div></div>}
 
-            {Object.keys(context.user).length != 0 &&
+            {!context.isLoggedIn &&
             
             <div className="allwrap">
                 <Header />
