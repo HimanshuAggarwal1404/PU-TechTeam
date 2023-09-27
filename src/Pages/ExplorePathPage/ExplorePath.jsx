@@ -1,4 +1,4 @@
-import "../../Pages/ExplorePathPage/ExplorePath.scss"
+import styles from '../../Pages/ExplorePathPage/ExplorePath.module.scss'
 import Block from "../../Components/Block/Block"
 import jwtDecode from "jwt-decode"
 import { useEffect } from "react"
@@ -12,8 +12,8 @@ const ExplorePath = () => {
         var userObject = jwtDecode(response.credential);
         console.log(userObject);
         context.setUser(userObject);
-        sessionStorage.setItem('users', JSON.stringify(userObject));
-        // console.log(sessionStorage.getItem('users'));
+        localStorage.setItem('users', JSON.stringify(userObject));
+        // console.log(localStorage.getItem('users'));
         // console.log(context.isLoggedIn);
         // document.getElementById("signInDiv").hidden = true;
     }
@@ -34,27 +34,27 @@ const ExplorePath = () => {
     return (
         <>
             {context.isLoggedIn &&
-            <div className="signin" id="signin">
+            <div className={styles.signin} id="signin">
             <div id="signInDiv"></div></div>}
             
-            {!context.isLoggedIn && <div className="ExplorePath">
-                <div className="ExplorePathBlackBox">
-                    <div className="ExplorePathBlackBox-desc">
+            {!context.isLoggedIn && <div className={styles.ExplorePath}>
+                <div className={styles.ExplorePathBlackBox}>
+                    <div className={styles.ExplorePathBlackBoxDesc}>
           
-                            <div className="ExplorePathBlackBox-desc-heading1">Learning</div>
-                            <div className="ExplorePathBlackBox-desc-heading2">Tracks</div>
+                            <div className={styles.ExplorePathBlackBoxDescHeading1}>Learning</div>
+                            <div className={styles.ExplorePathBlackBoxDescHeading2}>Tracks</div>
                         
-                        <div className="ExplorePathBlackBox-desc-content">The career tracks are meant especially from the point of view to help you start your preparation journey in the field of your choice. We have compiled an ordered playlist of resources for you to follow regarding each of these career fields.</div>
+                        <div className={styles.ExplorePathBlackBoxDescContent}>The career tracks are meant especially from the point of view to help you start your preparation journey in the field of your choice. We have compiled an ordered playlist of resources for you to follow regarding each of these career fields.</div>
                     </div>
-                    <div className="ExplorePathBlackBox-img"><img src={img} alt="clockTower"/></div>
+                    <div className={styles.ExplorePathBlackBoxImg}><img src={img} alt="clockTower"/></div>
                 </div>
-                <div className="three-color-rectangles">
-                    <div className="redRectangle"></div>
-                    <div className="blueRectangle"></div>
-                    <div className="yellowRectangle"></div>
+                <div className={styles.threeColorRectangles}>
+                    <div className={styles.redRectangle}></div>
+                    <div className={styles.blueRectangle}></div>
+                    <div className={styles.yellowRectangle}></div>
                 </div>
 
-                <div className="ExplorePathWrapper">
+                <div className={styles.ExplorePathWrapper}>
                     <Block url="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Competitive Coding" />
                     <Block url="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Web Development" />
                     <Block url="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="ML/AI" />

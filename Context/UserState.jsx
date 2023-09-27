@@ -8,7 +8,7 @@ const UserState = (props) => {
         updateUser(newUser);
     }
     let isLoggedIn=false;
-    if (sessionStorage.getItem('users')){
+    if (localStorage.getItem('users')){
         isLoggedIn=false;
     }
     else{

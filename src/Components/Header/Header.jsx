@@ -20,9 +20,9 @@ const Header = () => {
                     <div className="userInfo">
                         <div className="username">
                             <div className="welcome">Welcome</div>
-                            <div className="name">{context.user.given_name}</div>
+                            <div className="name">{JSON.parse(localStorage.getItem('users')).given_name}</div>
                         </div>
-                        <img src={context.user.picture} alt={context.user.given_name} />
+                        <img src={JSON.parse(localStorage.getItem('users')).picture} alt={JSON.parse(localStorage.getItem('users')).given_name} />
 
                     </div>
                 </div>

@@ -9,7 +9,7 @@ import UserContext from "../../../Context/UserContext"
 const Home = () => {
     const context= useContext(UserContext);
     // let isLoggedIn = false;
-    // if (sessionStorage.getItem('users')){
+    // if (localStorage.getItem('users')){
     //     isLoggedIn=false;
     // }
     // else{
@@ -20,16 +20,20 @@ const Home = () => {
         var userObject = jwtDecode(response.credential);
         console.log(userObject);
         context.setUser(userObject);
-        sessionStorage.setItem('users', JSON.stringify(userObject));
+        localStorage.setItem('users', JSON.stringify(userObject));
+        console.log(JSON.parse(localStorage.getItem('users')));
+
         
-        // console.log(sessionStorage.getItem('users'));
+        // console.log(localStorage.getItem('users'));
         // console.log(context.isLoggedIn);
         // document.getElementById("signInDiv").hidden = true;
     }
     function handleSignOut() {
         context.setUser({});
-        sessionStorage.removeItem('users');
-        // console.log(sessionStorage.getItem('users'));
+        localStorage.removeItem('users');
+        console.log(localStorage.getItem('users'));
+
+        // console.log(localStorage.getItem('users'));
         // console.log(context.isLoggedIn);
         // document.getElementById("signInDiv").hidden = false;
 

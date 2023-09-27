@@ -30,7 +30,7 @@
     align-items: center;
     overflow: visible;
 
-    .ExplorePathBlackBox-desc {
+    .ExplorePathBlackBoxDesc {
         height: 80%;
         width: 50%;
         display: flex;
@@ -39,7 +39,7 @@
         align-items: center;
         
             
-            .ExplorePathBlackBox-desc-heading1 {
+            .ExplorePathBlackBoxDescHeading1 {
             font-family: Poppins;
             color: white;
             font-size: 96px;
@@ -51,7 +51,7 @@
             height: 25%;
 
         }
-        .ExplorePathBlackBox-desc-heading2 {
+        .ExplorePathBlackBoxDescHeading2 {
             font-family: Poppins;
             color: white;
             font-size: 96px;
@@ -63,7 +63,7 @@
             height: 25%;
 
         }
-        .ExplorePathBlackBox-desc-content {
+        .ExplorePathBlackBoxDescContent {
             color: #FFF;
             font-family: Poppins;
             font-size: 18px;
@@ -79,7 +79,7 @@
         }
     }
 
-    .ExplorePathBlackBox-img {
+    .ExplorePathBlackBoxImg {
         height: 100%;
         width: 50%;
         display: flex;
@@ -95,7 +95,7 @@
     }
 
 }
-.three-color-rectangles{
+.threeColorRectangles{
     position: absolute;
     top: -2vh;
     right: 0vw;
