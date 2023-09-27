@@ -64,9 +64,9 @@ const Home = () => {
             <div className={styles.allwrap}>
                 <Header />
                 <div className={styles.Homewrapper}>
-                    <Link classname={styles.link} to="/ExplorePath"><Homepagebox title="Explore Paths" logo="https://career-development-bits-pilani.notion.site/icons/search_blue.svg?mode=dark" /></Link>
-                    <Link classname={styles.link} to="/Upskill"><Homepagebox title="Up-Skill" logo="https://career-development-bits-pilani.notion.site/icons/hammer_blue.svg?mode=dark" /></Link>
-                    <Link classname={styles.link} to="/CrackInterviews"><Homepagebox logo="https://career-development-bits-pilani.notion.site/icons/friends_blue.svg?mode=dark" title="Crack Interviews" /></Link>
+                    <Link className={styles.link} to="/ExplorePath"><Homepagebox title="Explore Paths" logo="https://career-development-bits-pilani.notion.site/icons/search_blue.svg?mode=dark" /></Link>
+                    <Link className={styles.link} to="/Upskill"><Homepagebox title="Up-Skill" logo="https://career-development-bits-pilani.notion.site/icons/hammer_blue.svg?mode=dark" /></Link>
+                    <Link className={styles.link} to="/CrackInterviews"><Homepagebox logo="https://career-development-bits-pilani.notion.site/icons/friends_blue.svg?mode=dark" title="Crack Interviews" /></Link>
                 </div>
                 <div className={styles.signout}>
                 <button className={styles.signOutBtn} onClick={(e) => handleSignOut(e)}>Sign Out</button>
