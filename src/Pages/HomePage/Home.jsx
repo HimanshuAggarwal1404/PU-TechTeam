@@ -1,4 +1,4 @@
-import "../HomePage/Home.scss"
+import styles from "../HomePage/Home.module.scss"
 import Header from "../../Components/Header/Header"
 import { Link } from "react-router-dom"
 import jwtDecode from "jwt-decode"
@@ -56,20 +56,20 @@ const Home = () => {
         <>
         
             {context.isLoggedIn &&
-            <div className="signin" id="signin">
+            <div className={styles.signin} id="signin">
             <div id="signInDiv"></div></div>}
 
             {!context.isLoggedIn &&
             
-            <div className="allwrap">
+            <div className={styles.allwrap}>
                 <Header />
-                <div className="Homewrapper">
-                    <Link className="link" to="/ExplorePath"><Homepagebox title="Explore Paths" logo="https://career-development-bits-pilani.notion.site/icons/search_blue.svg?mode=dark" /></Link>
-                    <Link className="link" to="/Upskill"><Homepagebox title="Up-Skill" logo="https://career-development-bits-pilani.notion.site/icons/hammer_blue.svg?mode=dark" /></Link>
-                    <Link className="link" to="/CrackInterviews"><Homepagebox logo="https://career-development-bits-pilani.notion.site/icons/friends_blue.svg?mode=dark" title="Crack Interviews" /></Link>
+                <div className={styles.Homewrapper}>
+                    <Link classname={styles.link} to="/ExplorePath"><Homepagebox title="Explore Paths" logo="https://career-development-bits-pilani.notion.site/icons/search_blue.svg?mode=dark" /></Link>
+                    <Link classname={styles.link} to="/Upskill"><Homepagebox title="Up-Skill" logo="https://career-development-bits-pilani.notion.site/icons/hammer_blue.svg?mode=dark" /></Link>
+                    <Link classname={styles.link} to="/CrackInterviews"><Homepagebox logo="https://career-development-bits-pilani.notion.site/icons/friends_blue.svg?mode=dark" title="Crack Interviews" /></Link>
                 </div>
-                <div className="signout">
-                <button className="signOutBtn" onClick={(e) => handleSignOut(e)}>Sign Out</button>
+                <div className={styles.signout}>
+                <button className={styles.signOutBtn} onClick={(e) => handleSignOut(e)}>Sign Out</button>
                 </div>
 
                 </div>
