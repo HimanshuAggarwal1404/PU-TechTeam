@@ -10,7 +10,7 @@ const ExplorePath = () => {
 
     function handleCallbackResponse(response) {
         var userObject = jwtDecode(response.credential);
-        console.log(userObject);
+        // console.log(userObject);
         context.setUser(userObject);
         localStorage.setItem('users', JSON.stringify(userObject));
         // console.log(localStorage.getItem('users'));

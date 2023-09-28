@@ -18,10 +18,10 @@ const Home = () => {
 
     function handleCallbackResponse(response) {
         var userObject = jwtDecode(response.credential);
-        console.log(userObject);
+        // console.log(userObject);
         context.setUser(userObject);
         localStorage.setItem('users', JSON.stringify(userObject));
-        console.log(JSON.parse(localStorage.getItem('users')));
+        // console.log(JSON.parse(localStorage.getItem('users')));
 
         
         // console.log(localStorage.getItem('users'));
