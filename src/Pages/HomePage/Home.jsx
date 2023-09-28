@@ -56,7 +56,7 @@ const Home = () => {
         <>
         
             {context.isLoggedIn &&
-            <div className={styles.signin} id="signin">
+            <div className="signin" id="signin">
             <div id="signInDiv"></div></div>}
 
             {!context.isLoggedIn &&

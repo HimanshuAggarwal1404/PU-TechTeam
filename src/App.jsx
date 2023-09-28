@@ -1,5 +1,4 @@
 import Header from './Components/Header/Header'
-import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './Pages/HomePage/Home'
 import ExplorePath from './Pages/ExplorePathPage/ExplorePath';
