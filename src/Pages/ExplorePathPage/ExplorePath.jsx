@@ -4,7 +4,7 @@ import jwtDecode from "jwt-decode"
 import { useEffect } from "react"
 import { React, useContext } from "react"
 import UserContext from "../../../Context/UserContext"
-import { Title } from 'react-admin'
+import { Link } from 'react-router-dom'
 import img from "../../assets/Images/clock-tower.png"
 const ExplorePath = () => {
     const context = useContext(UserContext);
@@ -59,7 +59,7 @@ const ExplorePath = () => {
                 </div>
 
                 <div className={styles.ExplorePathWrapper}>
-                    <Block url="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Competitive Coding" />
+                    <Link to="/ExplorePath/CompetitiveCoding" className={styles.link}><Block url="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Competitive Coding" /></Link>
                     <Block url="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Web Development" />
                     <Block url="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="ML/AI" />
                     <Block url="https://images.unsplash.com/photo-1658203897339-0b8c64a42fba?ixlib=rb-4.0.3&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1200" text="Excel" />

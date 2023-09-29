@@ -5,6 +5,7 @@ import ExplorePath from './Pages/ExplorePathPage/ExplorePath';
 import CrackInterviews from './Pages/CrackInterviewsPage/CrackInterviews';
 import Upskill from './Pages/UpskillPage/Upskill';
 import UserState from '../Context/UserState';
+import CompetitiveCoding from "./Pages/ExplorePathPages/CompetetiveCoding/CompetitiveCoding";
 function App() {
 
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path='/ExplorePath' Component={ExplorePath} />
           <Route path='/CrackInterviews' Component={CrackInterviews} />
           <Route path='/Upskill' Component={Upskill} />
+          <Route path='/ExplorePath/CompetitiveCoding' Component={CompetitiveCoding} />
+
 
         </Routes>
       </BrowserRouter>

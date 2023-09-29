@@ -1,6 +1,11 @@
 import "../../Pages/CrackInterviewsPage/CrackInterviews.scss"
 import Block from "../../Components/Block/Block"
+import React from "react";
+import { useEffect } from "react";
 const CrackInterviews = () => {
+    useEffect(()=>{
+        document.title= 'Crack Interviews';
+    },[]);
     return (
         <div className="CrackInterviewWrapper">
             <Block url="https://images.unsplash.com/photo-1594904351111-a072f80b1a71?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1200" text="IT"/>
