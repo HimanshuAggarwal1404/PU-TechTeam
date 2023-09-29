@@ -4,6 +4,7 @@ import jwtDecode from "jwt-decode"
 import { useEffect } from "react"
 import { React, useContext } from "react"
 import UserContext from "../../../Context/UserContext"
+import { Title } from 'react-admin'
 import img from "../../assets/Images/clock-tower.png"
 const ExplorePath = () => {
     const context = useContext(UserContext);
@@ -17,6 +18,9 @@ const ExplorePath = () => {
         // console.log(context.isLoggedIn);
         // document.getElementById("signInDiv").hidden = true;
     }
+    useEffect(()=>{
+        document.title= 'Explore Paths';
+    },[]);
 
 
     useEffect(() => {

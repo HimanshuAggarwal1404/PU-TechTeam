@@ -38,6 +38,9 @@ const Home = () => {
         // document.getElementById("signInDiv").hidden = false;
 
     }
+    useEffect(()=>{
+        document.title= 'Placement Unit, BITS Pilani';
+    },[]);
 
     useEffect(() => {
         google.accounts.id.initialize({
