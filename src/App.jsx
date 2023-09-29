@@ -5,7 +5,7 @@ import ExplorePath from './Pages/ExplorePathPage/ExplorePath';
 import CrackInterviews from './Pages/CrackInterviewsPage/CrackInterviews';
 import Upskill from './Pages/UpskillPage/Upskill';
 import UserState from '../Context/UserState';
-import CompetitiveCoding from "./Pages/ExplorePathPages/CompetetiveCoding/CompetitiveCoding";
+import CompetitiveCoding from "./Pages/Explore Path Pages/CompetetiveCoding/CompetitiveCoding";
 function App() {
 
   return (
