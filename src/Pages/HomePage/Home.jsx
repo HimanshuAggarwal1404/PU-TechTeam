@@ -44,7 +44,7 @@ const Home = () => {
 
     useEffect(() => {
         google.accounts.id.initialize({
-            client_id: "1028850909564-e2hggnfb2m3n80vbtitdnf54d2j09gsi.apps.googleusercontent.com",
+            client_id: {import.meta.env.VITE_GOOGLE_CLIENT_ID},
             callback: handleCallbackResponse
         });
         google.accounts.id.renderButton(
