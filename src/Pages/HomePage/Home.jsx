@@ -39,7 +39,7 @@ const Home = () => {
 
     }
     useEffect(()=>{
-        document.title= 'Placemenst Unit, BITS Pilani';
+        document.title= 'Placement Unit, BITS Pilani';
     },[]);
 
     useEffect(() => {
